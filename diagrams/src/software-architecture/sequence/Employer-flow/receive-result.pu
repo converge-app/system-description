@@ -1,0 +1,15 @@
+@startuml
+hide footbox
+autonumber "<b>[0]"
+skinparam monochrome true
+
+actor Employer
+participant CollaborationService
+
+activate Employer
+Employer -> CollaborationService: Receive results
+
+activate CollaborationService
+CollaborationService -> CollaborationService: Checking results
+CollaborationService --> Employer: Confirms results is Received
+@enduml

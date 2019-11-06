@@ -1,0 +1,15 @@
+@startuml
+hide footbox
+autonumber "<b>[0]"
+skinparam monochrome true
+
+actor Freelancer
+participant BiddingService
+
+activate Freelancer
+Freelancer -> BiddingService: Delete my bid
+
+activate BiddingService
+BiddingService -> BiddingService: Checking the bid
+BiddingService --> Freelancer: Confirms bid is deleted
+@enduml

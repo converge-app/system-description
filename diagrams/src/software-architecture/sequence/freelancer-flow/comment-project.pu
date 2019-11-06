@@ -1,0 +1,16 @@
+@startuml
+hide footbox
+autonumber "<b>[0]"
+skinparam monochrome true
+
+actor Freelancer
+participant CollaborationService
+
+activate Freelancer
+Freelancer -> CollaborationService: comment on a project
+
+activate CollaborationService
+CollaborationService -> CollaborationService: Save comment
+CollaborationService --> Freelancer: Confirms comment is added
+
+@enduml
